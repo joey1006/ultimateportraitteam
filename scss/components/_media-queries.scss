@@ -1,0 +1,100 @@
+//Media Queries
+
+//Extra small
+@media screen and (max-width: 768px) {
+  .offset {
+    display: none;
+  }
+  .landing-text {
+    .content {
+      width: 100%;
+      //@include centered();
+      .video {
+        display: none;
+        width: 100%;
+      }
+    }
+  }
+  .portraits .col-md-4 {
+  	max-width: unset;
+    margin: 25px;
+  }
+  
+  
+.menu-center a{
+  background-color: blue;
+    padding-bottom: 25%;
+
+
+  }
+
+.navigation .container .row > div {
+  display: none;
+}
+.navigation .container .row > div:nth-of-type(2) {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  max-height: 100vh;
+  font-size: 2em;
+}
+
+.hamburger {
+  left: unset;
+  right: 7.5%;
+}
+
+.process .row > div {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.about .about-text .content button {
+  bottom: unset;
+}
+
+
+//* contact page *//
+
+.wpcf7-form-control {
+	max-width: 100%;
+}
+
+//* all portraits page *//
+.all-portraits .col-md-4 {
+	max-width: unset;
+}
+
+}
+//Small
+@media screen and (min-width: 768px) {
+  .nav_image_portait {
+  	width: 200px;
+  	height: 200px;
+  }
+  
+  .contact-kvk{
+  display: none;
+  }
+
+}
+//Medium
+@media screen and (min-width: 992px) {
+  .nav_image_portait {
+  	width: 250px;
+  	height: 250px;
+  }
+  .navigation .col-md-4:nth-of-type(2) {
+	font-size: 2.5em;
+}
+
+}
+//Large
+@media screen and (min-width: 1200px) {
+  .nav_image_portait {
+  	width: 300px;
+  	height: 300px;
+  }
+
+}
+

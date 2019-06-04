@@ -1,0 +1,76 @@
+.landing-header {
+  height: 100vh;
+  margin-top: 0 !important;
+  .landing-text {
+    margin-top: 150px;
+    .content {
+      width: 70%;
+      //@include centered();
+    }
+  }
+
+  .landing-image {
+    background-image: url("https://via.placeholder.com/600");
+    // background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2019/05/500.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100vh;
+    margin-left: 50%;
+  }
+  .on-scroll {
+    margin-left: 0 !important;
+    width: 100%;
+    background-position: 0 -500px;
+    transition: 1s;
+
+  }
+}
+
+.portraits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portraits .col-md-4 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 240px;
+	margin: 0 5px;
+	max-width: calc(33.33% - 10px);
+}
+
+.portraits .col-md-4 a p {
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+}
+
+.about {
+  position: relative;
+  .about-image {
+    height: 450px;
+    overflow: hidden;
+  }
+  .about-text {
+    .content {
+      margin: 0 50px 0 0;
+      button {
+        background-color: indianred;
+        color: white;
+        font-size: 18px;
+        padding: 20px 0;
+        width: 90%;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        // left: 0;
+      }
+    }
+  }
+}
+
+

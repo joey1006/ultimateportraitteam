@@ -1,59 +1,32 @@
 <?php
-//dit is de file voor hooks
-// de basics van deze file is om stylesheets en scripts toe te voegen
-// als we bootstrap willen gebruiken hier in laden
-
-function load_stylesheets()
-{
-    //load bootstrap stylesheet
-  wp_register_style('stylesheet', get_template_directory_uri() . '/css/bootstrap.min.css',
-  array(), false, 'all');
-  wp_enqueue_style('stylesheet');
-
-  //load custom / own css
-  wp_register_style('style', get_template_directory_uri() . '/style.css',
-  array(), false, 'all');
-  wp_enqueue_style('style');
-}
-add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 
-function include_jquery()
-{
 
-  wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.1.3.min.js', '', 1, true);
-}
-  add_action('wp_enqueue_scripts', 'include_jquery');
-
-
-function loadjs()
-{
-
-  wp_register_script('customjs', get_template_directory_uri() . '/js/scripts.js', '', 1, true );
-  wp_enqueue_script('customjs');
+function awesome_script_enqueue() {
+     wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/awesome.css', array(), '1.0.0', 'all');
+     wp_enqueue_script('customjs', get_template_directory_uri() . '/js/toggle.js', array(), '1.0.0', 'true');
 
 }
-add_action('wp_enqueue_scripts', 'loadjs');
+
+add_action( 'wp_enqueue_scripts', 'awesome_script_enqueue');
+
+
+function awesome_theme_setup() {
+
+    add_theme_support('menus');
+
+    register_nav_menu('primary', 'Primary Header Navigation');
+    register_nav_menu('secondary', 'Footer Navigation');
+}
+
+add_action('init', 'awesome_theme_setup');
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 
 
 
-add_theme_support('menus');
-add_theme_support('post-thumbnails');
-
-
-
-register_nav_menus(
-array(
-
-  'top_menu' => __('Top Menu', 'theme'),
-  'footer_menu' => __('Footer Menu', 'theme')
-      )
-
-);
-
-add_image_size('smallest', 300, 300, true);
-add_image_size('largest', 800, 800, true);
-
-
-  ?>
+?>

@@ -1,0 +1,35 @@
+//Colors
+$background-color: #ffffff;
+$highlight-color: indianred;
+$footer-color: #312f3d;
+$font-color: #000000;
+
+
+html {
+  --lightBtn: #FE016C;
+  --lightBg: #fff;
+  --lightColor: #232323;
+}
+
+html[data-theme='dark'] {
+  background: var(--lightBg);
+  --lightBtn: #FFBD07;
+  --lightBg: #232323;
+  --lightColor: #fff;
+}
+
+//Imports
+@import "components/all-the-styles";
+@import "components/light-dark";
+
+//@import "components/mixins";
+//@import "components/navigation";
+//@import "components/front-page";
+//@import "components/about";
+//@import "components/portraits";
+//@import "components/single-portait";
+//@import "components/footer";
+//@import "components/media-queries";
+//@import "components/contact";
+
+
