@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <div class="container-fluid">
     <div class="row row-margin">
-      <div class="col-sm-12 order-md-2 col-md-6">
+      <div class="col-sm-12 order-md-2 col-md-6 header-image">
         <div class="landing-image"> </div>
       </div>
       <div class="col-sm-12 order-md-1 col-md-6 landing-text padding-left row-mobile">

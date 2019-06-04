@@ -75,11 +75,11 @@ $(".close").click(function() {
 $('.multiple-portraits').slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: true,
     dots: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 10000
 });
 
 

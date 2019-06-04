@@ -6,6 +6,7 @@
         <title><?php wp_title(); ?></title>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -75,8 +76,8 @@
                   <div class="col-md-4">
                    <div class="menu-contact">
                     <h3> Contact</h3>
-                    <p class="menuTXT">06 14 48 95 94</p>
-                    <p class="menuTXT">daan@naadartworks.com</p>
+                       <p class="menuTXT"><a href="tel:+31614489594">+316 14 48 95 94</a></p>
+                       <p class="menuTXT"><a href="mailto:daan@naadartworks.com">daan@naadartworks.com</a></p>
                   </div>
                   </div>
               </div>

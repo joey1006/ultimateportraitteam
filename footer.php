@@ -2,19 +2,20 @@
       <?php
       query_posts(array(
           'post_type' => 'portrait',
-          'showposts' => 5
+          'showposts' => 4
       ) );
       ?>
       <div class="section">
       <div class="container-fluid padding center-mobile">
           <div class="row footer no-margin">
-              <div class="col-sm-12 col-md-4 col-lg-3 footer">
+              <div class="col-sm-12 col-md-4 col-lg-4 footer">
                 <h3> Ultimate portraits</h3>
                 <?php while (have_posts()) : the_post(); ?>
                         <a href="<?php the_permalink(); ?>"><p class="portrait_title"><?php the_field('portrait_title'); ?></p></a>
               <?php endwhile; ?>
+                  <p class="CTA_footer"> <a href="/portraits">See all portraits</a></p>
               </div>
-              <div class="col-sm-12 col-md-4 col-lg-3 footer">
+              <div class="col-sm-12 col-md-4 col-lg-4 footer">
                 <h3> Pages</h3>
                 <?php wp_nav_menu(); ?>
               </div>
@@ -22,10 +23,10 @@
               <div class="col-md-3 footer">
               </div>
 -->
-              <div class="col-sm-12 col-md-4 col-lg-3 offset-lg-3 footer">
+              <div class="col-sm-12 col-md-4 col-lg-4 offset-lg-3 footer">
                 <h3> Contact</h3>
-                <p class="color-footer">06 14 48 95 94</p>
-                <p class="color-footer">daan@naadartworks.com</p>
+                <p class="color-footer"><a href="tel:+31614489594">+316 14 48 95 94</a></p>
+                <p class="color-footer"><a href="mailto:daan@naadartworks.com">daan@naadartworks.com</a></p>
               </div>
             </div>
             <div class="row footer-padding footer-margin-top">
